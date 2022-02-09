@@ -124,7 +124,6 @@ class Board {
             }
             wordArr.push(charArr);
         }
-        console.table(wordArr);
         this.words = wordArr;
     }
 
@@ -178,9 +177,7 @@ class Board {
     }
 
     placeWords() {
-        // console.table(this.words);
         for(let i = 0; i < this.words.length; i++) {
-        // for(let i = 0; i < 1; i++) {
             let targetWord = this.words[i];
             let targetCell = 0;
             let targetDir = Math.floor(Math.random() * 4);
@@ -204,7 +201,6 @@ class Board {
 
             }
             do{
-                console.log("[161] " + targetCell);
                 targetCell = Math.floor(Math.random() * (this.height * this.width -1));
             }
             while((targetWord.length > this.getCellDistanceFromEdge(targetCell, targetDir) || !this.validPlacement(targetCell, targetWord.length, targetDir)));
@@ -240,7 +236,6 @@ class Board {
 
 
         }
-        console.table(this.wordPlacement);
 
         for(let gridLoop = 0; gridLoop < this.letters.length; gridLoop++){
             for(let wordLoop = 0; wordLoop < this.wordPlacement.length; wordLoop++){
