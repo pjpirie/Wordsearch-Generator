@@ -36,3 +36,25 @@
     transform: rotate(360deg);
   }
 }
+
+#board{
+  width: 80vh;
+  height: 80vh;
+  margin: 100px auto;
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  grid-template-rows: repeat(15, 1fr);
+}
+
+.wordList{
+  width: 80vh;
+  height: auto;
+  margin: 100px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  &__word{
+    margin: 10px 20px;
+  }
+}
