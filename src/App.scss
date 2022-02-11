@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@1,400;1,700&display=swap');
+
 .App {
   text-align: center;
 }
@@ -13,8 +15,8 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
+#game {
+  background-color: #fff;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -38,8 +40,8 @@
 }
 
 #board{
-  width: 80vh;
-  height: 80vh;
+  width: 60vh;
+  height: 60vh;
   margin: 100px auto;
   display: grid;
   grid-template-columns: repeat(15, 1fr);
@@ -57,4 +59,25 @@
   &__word{
     margin: 10px 20px;
   }
+}
+
+.board__cell{
+  font-size: 24px;
+  color: #0f0f0f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Comic Neue', cursive;
+  font-weight: 700;
+}
+
+.wordLetter{
+  color: red;
+}
+
+.active{
+  background: #41415e;
+  border: 1px solid #41415e;
+  border-radius: 50%;
+  margin: 5px;
 }
